@@ -27,9 +27,10 @@ $studentObj->getById($id);
 if($studentObj->schoolFees!="None")
 {
     
+
  ?>
     <form action="Gym_Is_CTRL.php"> <div>
-<button  class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Ishtrak Gym </button>
+<button  class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Ishtrak school $ Gym </button>
 </form>
 
 <?php
@@ -39,13 +40,15 @@ if($studentObj->schoolFees!="None")
 <br>
 <br>
 <br>
-<form action="IshtrakMin.php"> <div>
-<button  class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Ishtrak bus </button>
+<form action="BUS_Is_CTRL.php"> <div>
+<button  class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Ishtrak SCHOOL & bus </button>
 </form>
 <br>
 <br>
 <br>
-
+<form action="All_Is_CTRL.php"> <div>
+<button  class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">Ishtrak SCHOOL & bus &gym </button>
+</form>
 </body>
 
 

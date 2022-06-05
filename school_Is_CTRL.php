@@ -20,6 +20,7 @@ $studentObj=new Student();
 $studentObj=$studentObj->getById($id);
 $studentObj->Adons=$student->ishtrak();
 $studentObj->ubdate();
+
 header("location:IshtrakMin.php");
 
 

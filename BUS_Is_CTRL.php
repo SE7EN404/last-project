@@ -6,7 +6,7 @@ if(!isset( $_SESSION["Email"]))
 }
 include_once("Student.php");
 include_once("ishtrakM.php");
-include_once("GymDec.php");
+include_once("busDec.php");
 $id=$_SESSION["id"];
 $studentX=new Student();
 $studentX=$studentX->getById($id);
@@ -16,7 +16,7 @@ $student=new madrasa($student);
 
 $studentX->Adons=$student->ishtrak();
 
-$student=new Gym($student);
+$student=new bus($student);
 $studentX->Adons=$student->ishtrak();
 
 echo $studentX->Adons;
