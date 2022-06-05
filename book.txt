@@ -1,0 +1,7 @@
+2~Head First Design Patterns~CS~4~img/download.jpg
+3~Moby-Dick~literature~4~img/MV5BMTkzMjcwNTQyNV5BMl5BanBnXkFtZTcwMzY2OTEwNA@@._V1_FMjpg_UX1000_.jpg
+4~Oliver Twist~literature~4~img/51SH9vHXgtL.jpg
+5~Clean Code: A Handbook of Agile Software Craftsmanship~CS~4~img/41xShlnTZTL._SX376_BO1,204,203,200_.jpg
+6~tha land of zekola~literature~4~img/download.jpg
+7~Twenty Years After~literature~4~img/images25.jpg
+8~everything~Drama~4~img/1.jpg
