@@ -11,5 +11,4 @@ class user1
 
 
 
-echo "aya haaaaaga";
 ?>
