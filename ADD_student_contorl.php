@@ -26,6 +26,11 @@ if($flag==0)
      header("location:readStudent.php");
 
 }
+else
+{ 
+   echo " Theeeeeeeeeeeeeeee student already exist";
+   header("location:readStudent.php");
+}
 
 
 ?>
