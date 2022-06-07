@@ -44,6 +44,10 @@ function listAll()
       }
       return $ArrayObjects;
 }
+function add_reg_detail($reg_D)
+{
+  $reg_D->store();
+}
  function addReg($reg)
  {
      $reg->store();

@@ -3,7 +3,7 @@ include_once("filema.php");
 
 class regdetails
 {
-    public $filename;
+    public $fileMa;
     public $id;
     public $regid;
     public $courseid;    
@@ -61,12 +61,12 @@ class regdetails
 
   }
 }
-$new=new regdetails();
+//$new=new regdetails();
 //$new=$new->getById(4);
 //echo $new->courseid;
 //array=$new->listAll();
 //echo $array[0]->courseid;
-$new->courseid="5";
-$new->regid="6";
-$new->store();
+/*$new->courseid="5";
+$new->regid="10";
+$new->store();*/
 ?>

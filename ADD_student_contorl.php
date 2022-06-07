@@ -7,15 +7,16 @@ if( $_SESSION["Email"]!="Admin")
 include_once("Student.php");
 include_once("Admin.php");
 include_once("reg.php");
+include_once("reg_details.php");
 
-/*include_once("course.php");
+include_once("course.php");
 $selected=$_REQUEST["courseSELC"];
-foreach($selected as $item)
+/*foreach($selected as $item)
 {
     $k=new course;
     $k->Delete($item);
 }
-exit(0);*/
+//exit(0);*/
 
 ////////////
 $name=$_REQUEST["Name"];
@@ -48,7 +49,18 @@ $reg->date=date("Y/m/d");
 $reg->time= date("h:i:sa");
 $reg->studentId=$IDD;
 $AdminX->addReg($reg);
- header("location:readStudent.php");
+//////////Addding reegdetailsssssssss
+$regObjj=new reg();
+$regIDD=$regObjj->fileMa->getLastId();
+foreach($selected as $item)
+{
+$regDetailsObj=new regdetails();
+$regDetailsObj->regid=$regIDD;
+$regDetailsObj->courseid=$item;
+$AdminX->addReg($regDetailsObj);
+}
+
+ header("location: readStudent.php");
 
 }
 else
