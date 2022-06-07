@@ -46,7 +46,7 @@ class regdetails
 
     function getById($id)
   {
-     $t=new reg;
+     $t=new regdetails;
      $rec=$this->fileMa->getrecordById($id);
      $arrayline=explode($this->fileMa->Separator,$rec);
      $t->id=$arrayline[0];
@@ -61,4 +61,12 @@ class regdetails
 
   }
 }
+$new=new regdetails();
+//$new=$new->getById(4);
+//echo $new->courseid;
+//array=$new->listAll();
+//echo $array[0]->courseid;
+$new->courseid="5";
+$new->regid="6";
+$new->store();
 ?>
