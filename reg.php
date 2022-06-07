@@ -1,6 +1,7 @@
 <?php 
 
 include_once("filema.php");
+include_once("reg_details.php");
 
 class reg
 {
@@ -10,9 +11,10 @@ class reg
     public $adminId;
     public $date;
     public $time;
+    public $Details;
     function __construct()
     {
-
+        $this->Details=[];
         $this->fileMa=new Filemanage();
         $this->fileMa->Separator="~";
         $this->fileMa->filename="reg.txt";
@@ -34,7 +36,7 @@ class reg
   }
     function listAll()
   {
-    //btrga3 array every cell in it mn no3 objict elly rage3 mn getbyId
+    
    $ArrayObjects=array ();
    $myfile=fopen($this->fileMa->filename,"r+") or die("mfeshhhhh");
    $i=0;
@@ -60,7 +62,21 @@ class reg
      $t->adminId=$arrayline[2];
      $t->date=$arrayline[3];
      $t->time=$arrayline[4];
+   $d=new regdetails();
+   $dy=[];
+   $dy=$d->listAll();
+   $k=0;
 
+   for($i=0;$i<count($dy);$i++)
+   {
+      if($t->id==$dy[$i]->regid)
+      {
+
+        $t->Details[$k]=$dy[$i];
+        $k++;
+      }
+            
+   }
      return $t;
   }
   function Delete($id)
@@ -76,4 +92,7 @@ $new->adminId="2145";
 $new->date=date("Y/m/d");
 $new->time= date("h:i:sa");
 $new->store()*/
+//$new=new reg();
+//$new=$new->getById(11);
+//echo $new->Details[0]->courseid;
 ?>
