@@ -15,26 +15,20 @@ if( $_SESSION["Email"]!="Admin")
     <tr>
   
          <td>id</td>
-         <td>Admin id</td>
-         <td>student id </td>
-         <td>date</td>
-         <td>time</td>
-
+         <td>registration id</td>
+         <td>Course ID</td>
     </tr>
-
     <?php
-     include_once("reg.php");
-     $obj=new reg;
+     include_once("reg_details.php");
+     $obj=new regdetails();
      $regArray=[];
      $regArray=$obj->listAll();
      for($i=0;$i<count($regArray);$i++)
      {
          echo "<tr> 
-         <td><a href=read_reg_Dfor.php?Id=".$regArray[$i]->id.">". $regArray[$i]->id."</td>
-         <td>". $regArray[$i]->adminId."</td>
-         <td>". $regArray[$i]->studentId."</td>
-         <td>". $regArray[$i]->date."</td>
-         <td>". $regArray[$i]->time."</td></tr>";
+         <td>". $regArray[$i]->id."</td>
+         <td>". $regArray[$i]->regid."</td>
+         <td>". $regArray[$i]->courseid."</td></tr>";
      }
 
     ?>
