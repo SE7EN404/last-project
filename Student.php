@@ -62,7 +62,7 @@ class Student   extends user1
   
   function listAll()
   {
-    //btrga3 array every cell in it mn no3 objict elly rage3 mn getbyId
+    /
    $ArrayObjects=array ();
    $myfile=fopen($this->fileMa->filename,"r+") or die("mfeshhhhh");
    $i=0;
@@ -79,8 +79,7 @@ class Student   extends user1
 
   function store()
   {
-     //addd
-
+ 
      $this->id=$this->fileMa->getLastId()+75;
      $rec=$this->id.$this->fileMa->Separator.
      $this->name.$this->fileMa->Separator.$this->Email.
