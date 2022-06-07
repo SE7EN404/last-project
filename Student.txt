@@ -1,4 +1,4 @@
-1250~mohamed khaled~mohamed@gmail.com~147258~4~4/A~School,Bus,Gym~muslim
+1250~mohamed khaled~mohamed@gmail.com~147258~4~4/A~School,Bus~muslim
 1327~WAGDY~wagdy@mail.com~123~2~2/A~~muslim
 1402~Essam~essam@gmail.com~147~4~4/A~School~muslim
 1477~Ali~ali@gmail.com~159~1~1/A~~muslim
@@ -7,9 +7,8 @@
 1702~abdAlrahman~abdAlrahman@gmail.com~123f~4~4/A~~Muslim
 1777~Roqaya khaled~Roqaya@gmail.com~1234~4~4/A~~muslim
 1852~gouhar~Gohar@gmail.com~012~4~4/A~~Muslim
-2002~bebo~bebo@gmail.com~1245~4~4/A~~Muslim
 2077~SANTA~SANTA@gmail.com~1245~4~4/A~~Muslim
 2152~Maro~maro@gmail.com~maromaro~4~4/A~~Muslim
-2227~treka~treka@gmail.com~22~4~4/A~~Muslim
 2302~lordiana~lordiana@gmail.com~011~2~2/A~~Muslim
 2377~layla~layla@gmail.com~011d~4~4/A~~Muslim
+2452~Omar Adel~Omar@gmail.com~147~4~4/A~~Muslim

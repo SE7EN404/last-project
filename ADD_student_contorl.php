@@ -26,6 +26,14 @@ $class=$_REQUEST["ClassName"];
 $level=$_REQUEST["Level"];
 $Email=$_REQUEST["Email"];
 $obj=new Student;
+if($name==''||$password==''||$religion==''||$class==''||$level==''||$Email=='')
+{
+
+header("location: Add_student_Form.php");
+exit(0);
+
+
+}
 $array=[]; 
 $array=$obj->listAll();
 $flag=0;
@@ -57,7 +65,7 @@ foreach($selected as $item)
 $regDetailsObj=new regdetails();
 $regDetailsObj->regid=$regIDD;
 $regDetailsObj->courseid=$item;
-$AdminX->addReg($regDetailsObj);
+$AdminX->add_reg_detail($regDetailsObj);
 }
 
  header("location: readStudent.php");

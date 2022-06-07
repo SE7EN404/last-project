@@ -6,8 +6,9 @@ include_once("Admin.php");
 session_start();
 $Email=$_REQUEST["Email"];
 $password=$_REQUEST["password"];
-$studentObj=new Student($ID);
+$studentObj=new Student();
 $state=$studentObj->login($Email,$password);
+/////////////////////////////////
 $admin=new Admin1;
 $stateA=$admin->login($Email,$password);
 $libr=new libr;
