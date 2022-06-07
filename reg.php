@@ -58,8 +58,8 @@ class reg
      $rec=$this->fileMa->getrecordById($id);
      $arrayline=explode($this->fileMa->Separator,$rec);
      $t->id=$arrayline[0];
-     $t->studentId=$arrayline[1];
-     $t->adminId=$arrayline[2];
+     $t->adminId=$arrayline[1];
+     $t->studentId=$arrayline[2];
      $t->date=$arrayline[3];
      $t->time=$arrayline[4];
    $d=new regdetails();
