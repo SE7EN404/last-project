@@ -48,9 +48,32 @@ include_once("header.php");
                                 <p class="help-block text-danger"></p>
                             </div>
                         
+
+
+
+                            
+   <?php 
+      include_once("course.php");
+
+      $courseObj=new course;
+      $Array=[];
+      $Array=$courseObj->listAll();
+      for($i=0;$i<count($Array);$i++)
+      {
+   ?> 
+                            <div class="control-group">
+                                <input type="checkbox" class="form-control" id="subject" placeholder="Student CLASS Name"
+                                 required="required" data-validation-required-message="Please enter Student className"name="courseSELC[]" value="<?php echo $Array[$i]->id ?>" />
+                                <p class="help-block text-danger"> <?php echo $Array[$i]->name ?></p>
+                            </div>
+         <?php
+      } 
+         ?>
                             <div>
                                 <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton"> Add </button>
                             </div>
+                              
+                            
                         </form>
                     </div>
                 </div>

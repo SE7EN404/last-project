@@ -1,0 +1,5 @@
+1~English~60~40
+2~Arabic~50~50
+3~Math~50~50
+4~History~30~70
+5~GEO~50~50

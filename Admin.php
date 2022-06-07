@@ -17,8 +17,37 @@ include_once("user1.php");
   $this->fileMa->Separator="~";
   $this->fileMa->filename="Admin1.txt";
  }
-
-
+ function getById($id)
+  {
+     $t=new Admin1;
+     $rec=$this->fileMa->getrecordById($id);
+     $arrayline=explode($this->fileMa->Separator,$rec);
+     $t->id=$arrayline[0];
+     $t->name=$arrayline[1];
+     $t->Email=$arrayline[2];
+     $t->password=$arrayline[3];
+     
+     return $t;
+  }
+function listAll()
+{
+      $ArrayObjects=array ();
+      $myfile=fopen($this->fileMa->filename,"r+") or die("mfeshhhhh");
+      $i=0;
+      while(!feof($myfile))
+      {
+   
+       $line=fgets($myfile);
+       $lineArray=explode($this->fileMa->Separator,$line);
+        $ArrayObjects[$i]=$this->getById($lineArray[0]);
+        $i++;
+      }
+      return $ArrayObjects;
+}
+ function addReg($reg)
+ {
+     $reg->store();
+ }
  function addlibr($name,$password,$Email)
  {
        $this->librObj->name=$name;
@@ -31,6 +60,7 @@ include_once("user1.php");
  {
      $this->librObj->Delete($id);
  }
+ 
  function addST($name,$password,$Email,$level,$classN,$Religion)
  {
        $this->studentObj->name=$name;
@@ -79,6 +109,8 @@ include_once("user1.php");
  }
 
 
- $obj=new Admin1();
- $name="mohamed";
+// $obj=new Admin1();
+ ////$objArray=$obj->listAll();
+//echo $objArray[1]->Email;
+
 ?>

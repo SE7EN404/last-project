@@ -1,7 +1,23 @@
 <?php 
+session_start();
+if( $_SESSION["Email"]!="Admin")
+{
+   header("location:login_Form.php");
+}
 include_once("Student.php");
 include_once("Admin.php");
+include_once("reg.php");
 
+/*include_once("course.php");
+$selected=$_REQUEST["courseSELC"];
+foreach($selected as $item)
+{
+    $k=new course;
+    $k->Delete($item);
+}
+exit(0);*/
+
+////////////
 $name=$_REQUEST["Name"];
 $password=$_REQUEST["Password"];
 $religion=$_REQUEST["Religion"];
@@ -23,7 +39,16 @@ if($flag==0)
 {
      $AdminX=new Admin1;
      $AdminX->addST($name,$password,$Email,$level,$class,$religion);
-     header("location:readStudent.php");
+
+$OBJJ=new Student();
+$IDD=$OBJJ->fileMa->getLastId();
+$reg = new reg;
+$reg->adminId= $_SESSION["id"];
+$reg->date=date("Y/m/d");
+$reg->time= date("h:i:sa");
+$reg->studentId=$IDD;
+$AdminX->addReg($reg);
+ header("location:readStudent.php");
 
 }
 else

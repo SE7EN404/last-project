@@ -20,7 +20,7 @@ if($statelibr==true)
 }
  
 if($state==true)
-{
+{//student
     $array=$studentObj->listAll();
     for($i=0;$i<count($array);$i++)
     {
@@ -34,7 +34,16 @@ if($state==true)
     header("location: StudentMin.php");
 }
 if($stateA==true)
-{
+{//Admin
+    $arrayy=$admin->listAll();
+    for($i=0;$i<count($arrayy);$i++)
+    {
+        if($arrayy[$i]->Email==$Email)
+        {
+               $_SESSION["id"]=$arrayy[$i]->id;
+               $_SESSION["Name"]=$arrayy[$i]->name;
+        }
+    }
     $_SESSION["mmail"]=$Email;
     $_SESSION["Email"]="Admin";
     header("location: adminMin.php");

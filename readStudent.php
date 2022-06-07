@@ -27,6 +27,7 @@ include_once("Student.php");
    $obj=new Student;
    $array=[]; 
    $array=$obj->listAll();
+  
    for($i=0;$i<count($array);$i++)
    {
     echo"<tr> <td> <input type=checkbox name =STUSELC[] value=".$array[$i]->id."> </td>
