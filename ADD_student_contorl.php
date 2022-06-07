@@ -33,6 +33,7 @@ header("location: Add_student_Form.php");
 exit(0);
 
 
+
 }
 $array=[]; 
 $array=$obj->listAll();
@@ -58,17 +59,17 @@ $reg->time= date("h:i:sa");
 $reg->studentId=$IDD;
 $AdminX->addReg($reg);
 //////////Addding reegdetailsssssssss
-$regObjj=new reg();
-$regIDD=$regObjj->fileMa->getLastId();
-foreach($selected as $item)
-{
-$regDetailsObj=new regdetails();
-$regDetailsObj->regid=$regIDD;
-$regDetailsObj->courseid=$item;
-$AdminX->add_reg_detail($regDetailsObj);
-}
+   $regObjj=new reg();
+   $regIDD=$regObjj->fileMa->getLastId();
+      foreach($selected as $item)
+      {
+        $regDetailsObj=new regdetails();
+       $regDetailsObj->regid=$regIDD;
+       $regDetailsObj->courseid=$item;
+       $AdminX->addReg($regDetailsObj);
+      }
 
- header("location: readStudent.php");
+   header("location: readStudent.php");
 
 }
 else
