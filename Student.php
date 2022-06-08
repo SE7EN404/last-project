@@ -86,7 +86,9 @@ class Student   extends user1
      $this->name.$this->fileMa->Separator.$this->Email.
      $this->fileMa->Separator.$this->password.
      $this->fileMa->Separator.$this->level.
-     $this->fileMa->Separator.$this->className.$this->fileMa->Separator.$this->Adons.$this->fileMa->Separator.$this->religion;
+     $this->fileMa->Separator.$this->className.
+     $this->fileMa->Separator.$this->Adons.
+     $this->fileMa->Separator.$this->religion;
      $this->fileMa->storeRecordinFile($rec);
   }
 
