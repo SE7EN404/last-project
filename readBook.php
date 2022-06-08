@@ -1,6 +1,6 @@
 <?php
 session_start();
-if( $_SESSION["Email"]!="libr")
+if( $_SESSION["Email"]!="libr"&&$_SESSION["Email"]!="student")
 {
    header("location:login_Form.php");
 }

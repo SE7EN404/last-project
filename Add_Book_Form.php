@@ -25,11 +25,23 @@ include_once("header.php");
                                 <input type="text" class="form-control" id="name" placeholder="book Name" required="required" data-validation-required-message="Please enter Student Name" name="Name" />
                                 <p class="help-block text-danger"></p>
                             </div>
+                            <div class="control-group">
+                                <input type="radio" class="form-control" id="subject" placeholder="book type" required="required" data-validation-required-message="Please enter Student Email" name="type" value=" CS" />
+                                <label for="javascript">CS</label>
+                                <p class="help-block text-danger">Type</p>
+                            </div>
+                            <div class="control-group">
+                                <input type="radio" class="form-control" id="subject" placeholder="book type" required="required" data-validation-required-message="Please enter Student Email" name="type" value=" literature" />
+                                <label for="javascript">literature</label>
+                                <p class="help-block text-danger">Type</p>
+                            </div>
 
                             <div class="control-group">
-                                <input type="email" class="form-control" id="subject" placeholder="book type" required="required" data-validation-required-message="Please enter Student Email" name="type" />
-                                <p class="help-block text-danger"></p>
+                                <input type="radio" class="form-control" id="subject" placeholder="book type" required="required" data-validation-required-message="Please enter Student Email" name="type" value=" Drama" />
+                                <label for="javascript">Drama</label>
+                                <p class="help-block text-danger">Type</p>
                             </div>
+
 
 
                           

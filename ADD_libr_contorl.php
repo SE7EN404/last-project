@@ -4,6 +4,14 @@ include_once("Admin.php");
 $name=$_REQUEST["Name"];
 $password=$_REQUEST["Password"];
 $Email=$_REQUEST["Email"];
+if($name==''||$password==''||$Email=='')
+{
+
+header("location: Add_libr_Form.php");
+exit(0);
+
+
+}
 $obj=new libr;
 $array=[];
 $array=$obj->listAll();
